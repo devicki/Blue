@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One page layout - demo</title>
+    <link rel="stylesheet" href="/styles/styles.css">   
+    <link rel="stylesheet" href="/styles/buttons.css">  
+    <link rel="icon" href="favicon.ico">
+ 
+</head>
+<body id="maxtop">
+<!--NAVIGATION-->
+<nav>
+	<div class="top-nav">
+		<div class="nav-logo">BLUE</div>
+		<div class="nav-burger" onclick="showOrHide()">
+			<img src="/images/icons8-menu-filled-50.png" alt="">
+		</div>
+	</div>
+	<ul id="navtoggle">
+		<li><a href="#maxtop" class="animation-link">Home</a></li>
+		<li><a href="#service" class="animation-link">Service</a></li>
+		<li><a href="#projects" class="animation-link">Our projects</a></li>
+		<li><a href="#contact" class="animation-link">Contact</a></li>
+		<li><a href="#location" class="animation-link">Location</a></li>
+	</ul>
+</nav>
+<!--HEADER-->
+<header>
+	<div class="home-slider">
+		<div class="slider-txt">
+			<h1>ONEPAGE LAYOUT TEMPLATE</h1>
+			<h3>Mobile first - responsive clean layout</h3>
+			<button class="main-btn btn-anim">Join us</button>
+		</div>
+	</div>
+</header>
+
+
+<div class="flex-wrapper">
+<!--SEVICES PROJECTS-->
+<section class="b-title" id="service">
+	<h4 class="titles">SERVICE</h4>
+	<p>The Features of our Job</p>
+		<div class="sbox">
+			<i class=" fa fa-home fa-4x"></i>
+			<h2>SUPPORT</h2>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		</div>
+		<div class="sbox">
+			<i class="fa fa-id-card fa-4x" aria-hidden="true"></i>
+			<h2>WELL DOCUMENTED</h2>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		</div>	
+		<div class="sbox">
+			<i class="fa fa-shield fa-4x" aria-hidden="true"></i>
+			<h2>WEB SECURITY</h2>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		</div>		
+		<div class="sbox">
+			<i class="fa fa-folder fa-4x" aria-hidden="true"></i>
+			<h2>USER EXP</h2>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		</div>									
+</section>
+</div>
+<div class="flex-wrapper fp">
+<!--FEATURED PROJECTS-->
+<section class="b-title" id="projects">
+	<h4 class="titles">FEATURED PROJECTS</h4>
+	<div class="service-boxes">
+		<div class="sbox">
+			<img src="/images/portfolio/po1.jpg" alt="image">
+			<figcaption class="mask">
+			<h3>Wall street</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.</p>
+			</figcaption>	
+		</div>
+		<div class="sbox">
+			<img src="/images/portfolio/po2.jpg" alt="image">
+			<figcaption class="mask">
+			<h3>Wall street</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.</p>
+			</figcaption>	
+		</div>
+		<div class="sbox">
+			<img src="/images/portfolio/po3.jpg" alt="image">
+			<figcaption class="mask">
+			<h3>Wall street</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.</p>
+			</figcaption>	
+		</div>
+		<div class="sbox">
+			<img src="/images/portfolio/po4.jpg" alt="image">
+			<figcaption class="mask">
+			<h3>Wall street</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.</p>
+			</figcaption>	
+		</div>
+		<div class="sbox">
+			<img src="/images/portfolio/po5.jpg" alt="image">
+			<figcaption class="mask">
+			<h3>Wall street</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.</p>
+			</figcaption>	
+		</div>
+		<div class="sbox">
+			<img src="/images/portfolio/po6.jpg" alt="image">
+			<figcaption class="mask">
+			<h3>Wall street</h3>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.</p>
+			</figcaption>	
+		</div>
+	</div>
+</section>
+</div> 
+<!--FLEX WRAPPER END HERE-->
+<!--SLIDER-->
+<div class="wrap">
+  <div id="slider">
+    <div class="slide slide1">
+      <div class="slide-content">
+        <h1>WHAT PEOPLE SAY</h1>
+        <img src="/images/member-1.jpg" alt="member">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores impedit et illo, deleniti enim dicta dolore quasi esse debitis repudiandae.</p>
+      </div>
+    </div>
+    <div class="slide slide2">
+      <div class="slide-content">
+        <span>CONTENT / IMAGE NR 2</span>
+      </div>
+    </div>
+    <div class="slide slide3">
+      <div class="slide-content">
+        <span>CONTENT / IMAGE NR 3</span>
+      </div>
+    </div>
+    <div class="slide slide3">
+      <div class="slide-content">
+        <span>CONTENT / IMAGE NR 4</span>
+      </div>
+    </div>
+  </div>
+  <i id="arrow-left" class="fa fa-caret-left fa-5x arrow" aria-hidden="true"></i>
+  <i id="arrow-right" class="fa fa-caret-right fa-5x arrow" aria-hidden="true"></i>
+</div>
+<!--PRICE -->
+<section class="price">
+<!-- #1	-->
+	<div class="price-table">
+		<span>BRONZE</span>
+		<div class="value">
+			<span>$ 24,99</span>
+			<div>month</div>
+		</div>
+		<ul>
+			<li>No Bonus Points</li>
+			<li>No Bonus Points</li>
+			<li>No Bonus Points</li>
+			<li>No Bonus Points</li>
+			<li><a href="#">SIGN UP</a></li>
+		</ul>
+	</div>
+<!-- #2	-->
+<div class="price-table">
+		<span>SILVER</span>
+		<div class="value">
+			<span>$ 49,99</span>
+			<div>month</div>
+		</div>
+		<ul>
+			<li>Free Trial</li>
+			<li>Free Trial</li>
+			<li>Free Trial</li>
+			<li>Free Trial</li>
+			<li><a href="#">SIGN UP</a></li>
+		</ul>
+	</div>
+<!-- #3	-->
+<div class="price-table">
+		<span>GOLD</span>
+		<div class="value">
+			<span>$ 79,99</span>
+			<div>month</div>
+		</div>
+		<ul>
+			<li>All Bonus Points</li>
+			<li>All Bonus Points</li>
+			<li>All Bonus Points</li>
+			<li>All Bonus Points</li>
+			<li><a href="#">SIGN UP</a></li>
+		</ul>
+	</div>	
+</section>
+<!--PARALLAX -->	
+<section class="parallax">
+	<div class="parallax"></div>
+	<div class="para-content">
+		<h1 class="titles">FOLLOW US</h1>
+		<span>Simple follow buttons to help you get followers on</span>
+		<ul>
+			<li><a href=""><i class="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i></a></li>
+			<li><a href=""><i class="fa fa-meetup fa-2x" aria-hidden="true"></i></a></li>
+			<li><a href=""><i class="fa fa-commenting-o fa-2x" aria-hidden="true"></i></a></li>
+		</ul>
+	</div>
+<div class="parallax"></div>			
+</section>
+<!--CONTACT FORM -->	
+<div class="contacts-wrapper">
+<section class="form" id="contact">
+	<h3>CONTACT</h3>
+	<span>Leave a message, we will message you back as soon as possible.</span>
+	<form action="php/contact.php" method="post" id="form1" class="main-form">
+		<input type="text" name="first_name" placeholder="Your name...">
+		<input type="email" name="email" placeholder="Your Email...">
+		<textarea rows="4" cols="40" name="message" placeholder="Your Message...">
+		</textarea>
+		
+	</form>
+	<button type="submit" form="form1" value="Submit" class="main-btn btn-anim">Send</button>
+</section>
+<!--CONTACT ADDRESS -->
+<section class="contact flex-col ">	
+	<h3>CONTACT US</h3>
+	<p><i class="fa fa-pencil"></i>Phoenix Inc.<span>PO Box 345678</span> <span>Little Lonsdale St, Melbourne </span><span>Australia</span></p>
+	<p><i class="fa fa-phone"></i>Phone: (415) 124-5678 </p>
+	<p><i class="fa fa-envelope"></i>website@yourname.com</p>
+	<img src="/images/message.png" alt="" class="img-msg">
+</section>
+</div>
+<!--MAP DIV-->
+<iframe src="https://snazzymaps.com/embed/42933" width="100%" height="400px" style="border:none;"></iframe>
+<!--FOOTER	-->
+<footer class="flex-col" id="location">
+<h3 class="titles">NEWSLETTER SIGNUP</h3>
+<span>Get Cool Stuff! We hate spam!</span>	
+<form action="#" class="main-form">
+	<input type="email" placeholder="Enter Your Email...">
+	<button class="main-btn btn-anim">Subscribe</button>	
+</form>
+<div class="footer-social">
+	<ul>
+		<li><a href="#"><i class="fa fa-thumbs-up fa-3x"></i></a></li>
+		<li><a href="#"><i class="fa fa-twitter fa-3x"></i></a></li>
+		<li><a href="#"><i class="fa fa-skype fa-3x"></i></a></li>
+		<li><a href="#"><i class="fa fa-dribbble fa-3x"></i></a></li>
+		<li><a href="#"><i class="fa fa-youtube fa-3x"></i></a></li>
+	</ul>
+</div>
+</footer>
+<!--FOOTER END-->
+<script src="/js/slider.js"></script>
+<script src="js/menu-toggle.js"></script>
+<script src="js/scrolling.js"></script>
+<script src="https://use.fontawesome.com/691a13b5cc.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+	
+function initMap() {
+    var myLatLng = {lat: 51.863, lng: -2.044};
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 8,
+        center: myLatLng
+    });
+
+    var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'We are here!'
+    });
+};
+$('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+});
+</script>
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZTQAmlPT6k6kWpvkvMD8-Gn--m4OvOEU&callback=initMap">
+    </script>
+</body>
+</html>
+
+

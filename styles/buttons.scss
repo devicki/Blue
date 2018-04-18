@@ -1,0 +1,43 @@
+.main-btn{
+	background-color: $purple;
+    box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.15) inset;
+    padding: 12px 35px;
+    color: $light2;
+	border: none;
+	font-size: 1.1em;
+	cursor: pointer;
+}
+.btn-anim{
+	vertical-align: middle;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+	display: inline-block;
+	transform: translateZ(0);
+	backface-visibility: hidden;
+	transition-property: color;
+	transition-duration: 0.3s;
+}
+.btn-anim:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: $light2;
+	transform: scaleX(0);
+	transform-origin: 0 50%;
+	transition-property: transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;
+}
+
+.btn-anim:hover, .btn-anim:focus, .btn-anim:active {
+	color: $purple;
+}
+
+.btn-anim:hover:before, .btn-anim:focus:before, .btn-anim:active:before {
+	transform: scaleX(1);
+}
+	

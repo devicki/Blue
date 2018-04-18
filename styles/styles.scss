@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Aclonica');
+@import "normalize.css";
+@import "reset.css";
+@import "variables";
+@import "buttons";
+
+//-------------------- 360px-576px --------------------//
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.flex-col{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+/*============================================================
+//NAVIGATION
+==============================================================*/
+nav{
+    position: fixed;
+    background-color:rgba(0, 0, 0, 0.45);
+    width: 100%;
+	z-index: 2;
+    .top-nav{
+        display: flex;
+        justify-content: space-between;
+		align-items: center;
+        padding: 10px;
+        border-bottom: 2px solid $purple;
+        .nav-logo{
+		font-size: 2.3em;
+		color: $purple;	
+		font-family: Aclonica;
+        }
+        .nav-burger img{
+            display: block;
+			cursor: pointer;
+			width: 25px;
+			height: 25px;
+			border: 2px solid $purple;
+			padding: 5px;
+        }
+    }
+    ul{
+		display: none;
+        padding: 15px;
+        li{
+            padding: 10px 0;
+            a{
+                text-decoration: none;
+                color: #fff;
+                text-transform: uppercase; 
+				font-size: 1.2em;
+				font-weight: bold;
+            }
+        }
+    }
+}
+/*============================================================
+//HEADER
+==============================================================*/
+header{
+    max-width: 100vw;
+    height: 100vh;
+    .home-slider{
+        background-image: url("../images/pexels-photo-96422.jpeg");
+        background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.slider-txt{
+			letter-spacing: 2px;
+			word-break: keep-all;
+			text-align: center;
+			font-size: 1.1em;
+			h1{
+				font-weight: 700;
+				font-size: 2em;
+			}
+			h3{
+				margin: 15px 0;
+			}
+		}
+    }
+}
+/*============================================================
+//CONTENT -- SERVICES
+==============================================================*/
+.flex-wrapper{
+	margin: 40px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	.b-title{
+		text-align: center;
+		h4{
+		font-size: 1.9em;
+		border-bottom: 3px solid $purple;
+		margin: 30px 0;
+		display: inline;
+		}
+		p{
+		padding-top: 15px;
+		}
+	}
+	.sbox{
+		margin: 30px 0;
+		position: relative;
+		overflow: hidden;
+		font-size: 1.1em;
+		.mask{
+			background-color: rgba(39, 39, 39, 0.67);
+			color: #fff;
+			position: absolute;
+			display: block;
+			max-width: 100%;
+			padding:15px;
+			bottom: -65px;
+			pointer-events: none;
+			visibility: hidden;
+			transition: bottom 0.3s linear;
+		}
+		h2{
+		border-bottom: 3px solid $purple;
+			display: inline;
+		}
+		i{
+			display: block;
+		}
+	}
+	.sbox img{
+		width: 100%;
+		height: auto;
+		display:block;
+		&:hover + .mask{
+			bottom:0;
+			visibility: visible;
+			transition: bottom 0.3s linear;
+		}
+		
+	}
+}
+/*============================================================
+SLIDER
+==============================================================*/
+.wrap, .slide-content{
+	color: #000;
+	width: 100%;
+	height: 380px;
+	overflow-x: hidden;
+	position: relative;
+}
+.slide{
+background: #87e0fd;
+background: -moz-linear-gradient(-45deg, #87e0fd 0%, #62bcfa 38%, #62bcfa 38%, #6534ff 100%);
+background: -webkit-linear-gradient(-45deg, #87e0fd 0%,#62bcfa 38%,#62bcfa 38%,#6534ff 100%);
+background: linear-gradient(135deg, #87e0fd 0%,#62bcfa 38%,#62bcfa 38%,#6534ff 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#6534ff',GradientType=1 );
+	.slide-content{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		text-align: center;
+		img{
+			width: 150px;
+			height: auto;
+			border-radius: 100%;
+			border: 2px solid #000;
+		}
+		p{
+			max-width: 350px;
+		}
+	}
+}
+.arrow{
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px;
+}
+#arrow-left{
+	left: 0;
+	margin-left: 30px;
+}
+#arrow-right{
+
+	right: 0;
+	margin-right: 30px;
+}
+/*============================================================
+//PRICES SECTION
+==============================================================*/
+section.price{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 40px 0;
+	.price-table{
+		border: 1px solid black;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		width: 90%;
+		padding-top: 20px; 
+		text-align: center;
+		background-color: $light2;
+		margin: 20px 0;
+		span{
+			font-size: 1.7em;
+		}
+		ul{
+			width: 100%;
+			font-size: 1.2em;
+		}
+		li{
+			padding: 12px 0;
+			display: block;
+			border-top: 2px solid #000;
+		}
+		li:last-of-type{
+			padding: 0;
+		}
+		li a{
+			text-decoration: none;
+			color: #000;
+			display: block;
+			padding: 12px 0;
+			&:hover{
+				background-color: $blueish;
+			}	
+		}
+		.value{
+			padding: 10px 0;
+			span{
+				font-size: 1.4em;
+			}
+		}
+	}	
+}
+/*============================================================
+//PARALLAX
+==============================================================*/
+.parallax {
+    background-image: url("/images/pobrane.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;	
+}
+.para-content{
+	font-size: 1.3em;
+	padding: 150px 50px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	font-weight: 500;
+	h1{
+		font-size: 1.6em;
+		border-bottom: 3px solid $purple;
+	}
+	ul{
+		padding: 30px 0;
+		display: flex;
+		width: 300px;
+		justify-content: space-between;
+		li{
+			border-radius: 50%;
+			border: solid 3px $purple;
+			padding: 15px;
+			transition: transform .4s ease-in-out;
+			&:hover{
+				transform: rotate(360deg);
+			}
+			a{
+				color: $purple;
+			}
+		}
+	}
+}	
+/*============================================================
+//FORM FIELDS
+==============================================================*/
+section.form{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	h3{
+		font-size: 1.6em;
+		border-bottom: 3px solid $purple;
+		margin: 30px 0;
+	}
+	form{
+		text-align: center;
+		input, textarea{
+			display: block;
+			margin: 20px 0;
+			width: 300px;
+			height: 150px;
+			border: 2px solid $light2;
+		}
+		input{
+			height: 20px;
+			padding: 10px 0;
+		}
+	}
+}
+/*============================================================
+//CONTACT ADRESS
+==============================================================*/
+section.contact{
+	p,span,{
+		padding: 10px 0;
+		font-size: 1.1em;
+	}
+	i{
+		margin: 0 10px;
+	}
+	h3{
+		font-size: 1.6em;
+		border-bottom: 3px solid $purple;
+		margin: 30px 0;
+	}
+	.img-msg{
+		display: none;
+	}
+}
+#map{
+	width: 100%;
+	height: 300px;
+	margin-top: 30px;
+}
+/*============================================================
+//FOOTER
+==============================================================*/
+footer{
+	background-color: $blueish;
+	padding: 50px 0;
+	h3{
+	font-size: 1.3em;
+	letter-spacing: 2px;
+	}
+	span{
+	margin: 10px 0;
+	}	
+	form{
+		input{
+			display: block;
+			margin: 20px 0;
+			height: 20px;
+			width:  300px;
+			padding: 10px 0;
+			border: 2px solid $light2;
+		}
+	}
+	ul li{
+		display: inline-block;
+		margin-top: 30px;
+		padding: 5px;
+		a{
+			color: $purple;
+			&:hover{
+				color: $light2;
+			}
+		}
+	}
+}
+
+
+
+
+/*============================================================
+//RESPONSIVE WEB DESIGN
+==============================================================*/
+
+
+
+
+//-------------------- 576px-992px --------------------//
+@media screen and (min-width: 577px){
+	.fp{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.service-boxes, .flex-wrapper{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		padding: -10px;
+		margin-top: 20px;
+		.sbox{
+			margin: 10px;
+			width: 45%;
+			display: inline-block;
+		}
+	}
+}
+//-------------------- 992px-1200px --------------------//
+@media screen and (min-width: 992px){
+.service-boxes{
+	.sbox{
+		margin: 10px;
+		width: 25%;
+		display: inline-block;
+	}
+}
+#service{
+	.sbox{
+		margin: 40px 0;
+		padding: 20px 5px;
+		}
+}
+section.price{
+	flex-direction: row;
+	.price-table{
+		margin:0 10px;
+	}
+}
+.contacts-wrapper{
+	display: flex;
+	align-items:baseline;
+	justify-content: center;
+	.form, .contact{
+		max-width: 30%;
+		margin: 0 80px;
+		.img-msg{
+			margin-top: 30px;
+			display: inline-block;
+			width: 350px;
+			height: 200px;
+		}
+	}	
+}
+header .home-slider .slider-txt{
+	letter-spacing: 2px;
+	word-break: keep-all;
+	text-align: center;
+	h1{
+		font-weight: 700;
+		font-size: 3.5em;
+	}
+	h3{
+		margin: 15px 0;
+		font-size: 2em;
+		padding-bottom: 20px;
+	}
+}
+.titles{
+	font-size: 2em !important;
+}
+nav{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid $purple;
+	.top-nav {
+		margin-left: 40px;
+		border-bottom: none;	
+		.nav-burger{
+		display: none;
+		}
+	}	
+	#navtoggle{
+		display: inline-block;
+		margin-right: 40px;
+		li{
+			display: inline-block;
+			margin: 0 10px;
+			a.animation-link{
+            	text-decoration: none;
+            	color: #fff;
+            	display: inline-block;
+				font-weight: normal;
+            &::after{
+              content: "";
+              display: block;
+              width:0;
+              height: 2px;
+              background-color: $purple;
+              transition: width .3s linear;
+            }
+            &:hover::after{
+              width:100%;
+              transition: width .3s linear;
+            }
+          }
+        }
+      }
+	}			
+}
+//-------------------- 1200px + --------------------//
+@media screen and (min-width: 1200px){
+	#service{
+		.sbox{
+			max-width: 20%;	
+		}
+	}
+}
+
+
+

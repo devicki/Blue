@@ -1,0 +1,460 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Aclonica");
+@import url(normalize.css);
+@import url(reset.css);
+.main-btn {
+  background-color: #6534ff;
+  box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.15) inset;
+  padding: 12px 35px;
+  color: #bbc4ef;
+  border: none;
+  font-size: 1.1em;
+  cursor: pointer; }
+
+.btn-anim {
+  vertical-align: middle;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  display: inline-block;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  transition-property: color;
+  transition-duration: 0.3s; }
+
+.btn-anim:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #bbc4ef;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out; }
+
+.btn-anim:hover, .btn-anim:focus, .btn-anim:active {
+  color: #6534ff; }
+
+.btn-anim:hover:before, .btn-anim:focus:before, .btn-anim:active:before {
+  transform: scaleX(1); }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+/*============================================================
+//NAVIGATION
+==============================================================*/
+nav {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.45);
+  width: 100%;
+  z-index: 2; }
+  nav .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 2px solid #6534ff; }
+    nav .top-nav .nav-logo {
+      font-size: 2.3em;
+      color: #6534ff;
+      font-family: Aclonica; }
+    nav .top-nav .nav-burger img {
+      display: block;
+      cursor: pointer;
+      width: 25px;
+      height: 25px;
+      border: 2px solid #6534ff;
+      padding: 5px; }
+  nav ul {
+    display: none;
+    padding: 15px; }
+    nav ul li {
+      padding: 10px 0; }
+      nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        font-weight: bold; }
+
+/*============================================================
+//HEADER
+==============================================================*/
+header {
+  max-width: 100vw;
+  height: 100vh; }
+  header .home-slider {
+    background-image: url("../images/pexels-photo-96422.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    header .home-slider .slider-txt {
+      letter-spacing: 2px;
+      word-break: keep-all;
+      text-align: center;
+      font-size: 1.1em; }
+      header .home-slider .slider-txt h1 {
+        font-weight: 700;
+        font-size: 2em; }
+      header .home-slider .slider-txt h3 {
+        margin: 15px 0; }
+
+/*============================================================
+//CONTENT -- SERVICES
+==============================================================*/
+.flex-wrapper {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .flex-wrapper .b-title {
+    text-align: center; }
+    .flex-wrapper .b-title h4 {
+      font-size: 1.9em;
+      border-bottom: 3px solid #6534ff;
+      margin: 30px 0;
+      display: inline; }
+    .flex-wrapper .b-title p {
+      padding-top: 15px; }
+  .flex-wrapper .sbox {
+    margin: 30px 0;
+    position: relative;
+    overflow: hidden;
+    font-size: 1.1em; }
+    .flex-wrapper .sbox .mask {
+      background-color: rgba(39, 39, 39, 0.67);
+      color: #fff;
+      position: absolute;
+      display: block;
+      max-width: 100%;
+      padding: 15px;
+      bottom: -65px;
+      pointer-events: none;
+      visibility: hidden;
+      transition: bottom 0.3s linear; }
+    .flex-wrapper .sbox h2 {
+      border-bottom: 3px solid #6534ff;
+      display: inline; }
+    .flex-wrapper .sbox i {
+      display: block; }
+  .flex-wrapper .sbox img {
+    width: 100%;
+    height: auto;
+    display: block; }
+    .flex-wrapper .sbox img:hover + .mask {
+      bottom: 0;
+      visibility: visible;
+      transition: bottom 0.3s linear; }
+
+/*============================================================
+SLIDER
+==============================================================*/
+.wrap, .slide-content {
+  color: #000;
+  width: 100%;
+  height: 380px;
+  overflow-x: hidden;
+  position: relative; }
+
+.slide {
+  background: #87e0fd;
+  background: -moz-linear-gradient(-45deg, #87e0fd 0%, #62bcfa 38%, #62bcfa 38%, #6534ff 100%);
+  background: -webkit-linear-gradient(-45deg, #87e0fd 0%, #62bcfa 38%, #62bcfa 38%, #6534ff 100%);
+  background: linear-gradient(135deg, #87e0fd 0%, #62bcfa 38%, #62bcfa 38%, #6534ff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#6534ff',GradientType=1 ); }
+  .slide .slide-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center; }
+    .slide .slide-content img {
+      width: 150px;
+      height: auto;
+      border-radius: 100%;
+      border: 2px solid #000; }
+    .slide .slide-content p {
+      max-width: 350px; }
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px; }
+
+#arrow-left {
+  left: 0;
+  margin-left: 30px; }
+
+#arrow-right {
+  right: 0;
+  margin-right: 30px; }
+
+/*============================================================
+//PRICES SECTION
+==============================================================*/
+section.price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0; }
+  section.price .price-table {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding-top: 20px;
+    text-align: center;
+    background-color: #bbc4ef;
+    margin: 20px 0; }
+    section.price .price-table span {
+      font-size: 1.7em; }
+    section.price .price-table ul {
+      width: 100%;
+      font-size: 1.2em; }
+    section.price .price-table li {
+      padding: 12px 0;
+      display: block;
+      border-top: 2px solid #000; }
+    section.price .price-table li:last-of-type {
+      padding: 0; }
+    section.price .price-table li a {
+      text-decoration: none;
+      color: #000;
+      display: block;
+      padding: 12px 0; }
+      section.price .price-table li a:hover {
+        background-color: #62bcfa; }
+    section.price .price-table .value {
+      padding: 10px 0; }
+      section.price .price-table .value span {
+        font-size: 1.4em; }
+
+/*============================================================
+//PARALLAX
+==============================================================*/
+.parallax {
+  background-image: url("/images/pobrane.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.para-content {
+  font-size: 1.3em;
+  padding: 150px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 500; }
+  .para-content h1 {
+    font-size: 1.6em;
+    border-bottom: 3px solid #6534ff; }
+  .para-content ul {
+    padding: 30px 0;
+    display: flex;
+    width: 300px;
+    justify-content: space-between; }
+    .para-content ul li {
+      border-radius: 50%;
+      border: solid 3px #6534ff;
+      padding: 15px;
+      transition: transform .4s ease-in-out; }
+      .para-content ul li:hover {
+        transform: rotate(360deg); }
+      .para-content ul li a {
+        color: #6534ff; }
+
+/*============================================================
+//FORM FIELDS
+==============================================================*/
+section.form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  section.form h3 {
+    font-size: 1.6em;
+    border-bottom: 3px solid #6534ff;
+    margin: 30px 0; }
+  section.form form {
+    text-align: center; }
+    section.form form input, section.form form textarea {
+      display: block;
+      margin: 20px 0;
+      width: 300px;
+      height: 150px;
+      border: 2px solid #bbc4ef; }
+    section.form form input {
+      height: 20px;
+      padding: 10px 0; }
+
+/*============================================================
+//CONTACT ADRESS
+==============================================================*/
+section.contact p, section.contact span {
+  padding: 10px 0;
+  font-size: 1.1em; }
+section.contact i {
+  margin: 0 10px; }
+section.contact h3 {
+  font-size: 1.6em;
+  border-bottom: 3px solid #6534ff;
+  margin: 30px 0; }
+section.contact .img-msg {
+  display: none; }
+
+#map {
+  width: 100%;
+  height: 300px;
+  margin-top: 30px; }
+
+/*============================================================
+//FOOTER
+==============================================================*/
+footer {
+  background-color: #62bcfa;
+  padding: 50px 0; }
+  footer h3 {
+    font-size: 1.3em;
+    letter-spacing: 2px; }
+  footer span {
+    margin: 10px 0; }
+  footer form input {
+    display: block;
+    margin: 20px 0;
+    height: 20px;
+    width: 300px;
+    padding: 10px 0;
+    border: 2px solid #bbc4ef; }
+  footer ul li {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 5px; }
+    footer ul li a {
+      color: #6534ff; }
+      footer ul li a:hover {
+        color: #bbc4ef; }
+
+/*============================================================
+//RESPONSIVE WEB DESIGN
+==============================================================*/
+@media screen and (min-width: 577px) {
+  .fp {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+
+  .service-boxes, .flex-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: -10px;
+    margin-top: 20px; }
+    .service-boxes .sbox, .flex-wrapper .sbox {
+      margin: 10px;
+      width: 45%;
+      display: inline-block; } }
+@media screen and (min-width: 992px) {
+  .service-boxes .sbox {
+    margin: 10px;
+    width: 25%;
+    display: inline-block; }
+
+  #service .sbox {
+    margin: 40px 0;
+    padding: 20px 5px; }
+
+  section.price {
+    flex-direction: row; }
+    section.price .price-table {
+      margin: 0 10px; }
+
+  .contacts-wrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: center; }
+    .contacts-wrapper .form, .contacts-wrapper .contact {
+      max-width: 30%;
+      margin: 0 80px; }
+      .contacts-wrapper .form .img-msg, .contacts-wrapper .contact .img-msg {
+        margin-top: 30px;
+        display: inline-block;
+        width: 350px;
+        height: 200px; }
+
+  header .home-slider .slider-txt {
+    letter-spacing: 2px;
+    word-break: keep-all;
+    text-align: center; }
+    header .home-slider .slider-txt h1 {
+      font-weight: 700;
+      font-size: 3.5em; }
+    header .home-slider .slider-txt h3 {
+      margin: 15px 0;
+      font-size: 2em;
+      padding-bottom: 20px; }
+
+  .titles {
+    font-size: 2em !important; }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #6534ff; }
+    nav .top-nav {
+      margin-left: 40px;
+      border-bottom: none; }
+      nav .top-nav .nav-burger {
+        display: none; }
+    nav #navtoggle {
+      display: inline-block;
+      margin-right: 40px; }
+      nav #navtoggle li {
+        display: inline-block;
+        margin: 0 10px; }
+        nav #navtoggle li a.animation-link {
+          text-decoration: none;
+          color: #fff;
+          display: inline-block;
+          font-weight: normal; }
+          nav #navtoggle li a.animation-link::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: #6534ff;
+            transition: width .3s linear; }
+          nav #navtoggle li a.animation-link:hover::after {
+            width: 100%;
+            transition: width .3s linear; } }
+@media screen and (min-width: 1200px) {
+  #service .sbox {
+    max-width: 20%; } }
+
+/*# sourceMappingURL=styles.css.map */
